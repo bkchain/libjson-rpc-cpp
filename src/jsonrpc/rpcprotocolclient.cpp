@@ -75,7 +75,7 @@ namespace jsonrpc
         Json::Value value;
         if(reader.parse(response, value))
         {
-            if(value.isMember(KEY_ID) && value.isMember(KEY_PROTOCOL_VERSION) && (value.isMember(KEY_RESULT) || value.isMember(KEY_ERROR)))
+            if(value.isMember(KEY_ID) && /*value.isMember(KEY_PROTOCOL_VERSION) &&*/ (value.isMember(KEY_RESULT) || value.isMember(KEY_ERROR)))
             {
                 if(value.isMember(KEY_RESULT))
                 {

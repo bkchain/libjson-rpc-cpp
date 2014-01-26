@@ -17,7 +17,9 @@
 #include "exception.h"
 
 #include "connectors/httpserver.h"
+#ifndef _MSC_VER
 #include "connectors/httpclient.h"
+#endif
 
 #include "specificationparser.h"
 #include "specificationwriter.h"
