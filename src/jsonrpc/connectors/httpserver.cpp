@@ -133,6 +133,7 @@ namespace jsonrpc
     {
         struct mg_connection* conn = (struct mg_connection*) addInfo;
         if (mg_printf(conn, "HTTP/1.1 200 OK\r\n"
+                      "Access-Control-Allow-Origin: *\r\n"
                       "Content-Type: application/json\r\n"
                       "Content-Length: %i\r\n"
                       "\r\n", (int)response.length()) > 0
